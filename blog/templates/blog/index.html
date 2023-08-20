@@ -15,6 +15,8 @@
                 <li>
                     <a href="{% url 'blog-post-detail' post.slug %}">{{ post.title | title }}</a>
                     <p>{{ post.excerpt }}</p>
+                    <b>(Author: {{ post.author.first_name }} {{ post.author.last_name }})</b>
+                    <p>Created at: {{ post.date }}</p>
                 </li>
             {% endfor %}
         </ul>

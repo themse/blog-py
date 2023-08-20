@@ -4,7 +4,8 @@ from .models import Post
 
 
 def index(request):
-    posts = get_list_or_404(Post)
+    LIMIT = 10
+    posts = get_list_or_404(Post.objects.order_by('-date', '-title')[:LIMIT])
 
     return render(request, template_name='blog/index.html', context={
         'posts': posts

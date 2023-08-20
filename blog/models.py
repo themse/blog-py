@@ -31,8 +31,8 @@ class Post(models.Model):
     content = models.TextField()
 
     author = models.ForeignKey(
-        Author, on_delete=models.CASCADE, related_name='posts')
-    tags = models.ManyToManyField(Tag, related_name='tags')
+        Author, on_delete=models.SET_NULL, null=True, related_name='posts')
+    tags = models.ManyToManyField(Tag)
 
     def get_absolute_url(self):
         return reverse("blog-post-detail", kwargs={"slug": self.slug})
