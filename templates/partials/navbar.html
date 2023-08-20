@@ -1,0 +1,18 @@
+{% load static %}
+
+{% block css_links %}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+{% endblock css_links %}
+
+<nav class="nav">
+    <div class="container">
+        <div class="navbar">
+            <a class="brand" href="{% url 'blog-home' %}">My Blog</a>
+
+            <ul class="nav-menu">
+                <li><a href="{% url 'blog-home' %}">Home</a></li>
+                <li><a href="{% url 'blog-about' %}">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

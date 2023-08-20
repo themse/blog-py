@@ -1,0 +1,15 @@
+.heading {
+    margin-bottom: 15px;
+}
+
+.post-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.post-list li {
+    display: flex;
+    gap: 25px;
+}

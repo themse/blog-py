@@ -1,0 +1,9 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none",
+  "python.languageServer": "Pylance",
+  "emmet.includeLanguages": { "django-html": "html" },
+  "window.zoomLevel": 0
+}

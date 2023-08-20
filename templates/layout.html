@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page_title %}My Blog{% endblock page_title %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    {% block css_links %}{% endblock css_links %}
+</head>
+<body>
+    {% include 'partials/navbar.html' %}
+
+    {% block content %}
+        <div class="container">
+            <p>Nothing found</p>
+        </div>
+    {% endblock content %}
+</body>
+</html>

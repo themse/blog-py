@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block page_title %}Home Page{% endblock page_title %}
+
+{% block css_links %}
+    <link rel="stylesheet" href="{% static 'blog/css/index.css' %}" />
+{% endblock css_links %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="heading">All Posts</h1>
+        <ul class="post-list">
+            {% for post in posts %}
+                <li>
+                    <a href="{% url 'blog-post-detail' post.slug %}">{{ post.title | title }}</a>
+                    <p>{{ post.excerpt }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
